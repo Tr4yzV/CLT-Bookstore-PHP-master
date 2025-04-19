@@ -1,9 +1,9 @@
 <?php
 class Database
 {
-    private const HOST = 'localhost';
-    private const USERNAME = 'root';
-    private const PASSWORD = '';
+    private const HOST = 'cltbookstore.mysql.database.azure.com';
+    private const USERNAME = 'cltbookstore';
+    private const PASSWORD = '123456&*(A@';
     private const DBNAME = 'bht_bookstore';
 
     /**
