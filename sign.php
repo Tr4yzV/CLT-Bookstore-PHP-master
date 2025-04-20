@@ -10,7 +10,6 @@
     <title>Đăng ký và đăng nhập</title>
     <link rel="icon" href="/assets/img/favicon.png" />
 </head>
-
 <?php
 include './config/config.php';
 include './config/database.php';
