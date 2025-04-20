@@ -17,6 +17,7 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+session_start();
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Đăng nhập
         if (isset($_POST['SignIn'])) {
@@ -26,7 +27,6 @@ error_reporting(E_ALL);
             $sql = "SELECT * FROM users WHERE (Username = '$username' OR Phone = '$username' OR Email = '$username') AND Password = sha1('$password') AND Status = 1";
             $users = Database::GetData($sql);
             if ($users != null) {
-                session_start();
                 $user = $users[0];
                 $_SESSION['Username'] = $user['Username'];
                 $_SESSION['DisplayName'] = $user['Fullname'] == '' ? $user['Username'] : $user['Fullname'];
