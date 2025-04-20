@@ -29,8 +29,17 @@
                 $_SESSION['DisplayName'] = $user['Fullname'] == '' ? $user['Username'] : $user['Fullname'];
                 $_SESSION['Avatar'] = !empty($user['Avatar']) ? $user['Avatar'] : '/assets/img/user.png';
                 $_SESSION['Role'] = $user['AccountTypeID'];
-                header('Location: admin/index.php');
-            } else {
+            
+                // Điều hướng dựa trên quyền
+                if ($user['AccountTypeID'] == 1) {
+                    // Admin
+                    header('Location: /admin/index.php');
+                } else {
+                    // Người dùng thường
+                    header('Location: /index.php');
+                }
+                exit();
+        } else {
                 $message = "<p style='color: #dc3545'>Tên đăng nhập hoặc mật khẩu không hợp lệ!</p>";
             }
         }
