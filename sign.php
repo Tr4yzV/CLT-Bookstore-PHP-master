@@ -29,7 +29,7 @@
                 $_SESSION['DisplayName'] = $user['Fullname'] == '' ? $user['Username'] : $user['Fullname'];
                 $_SESSION['Avatar'] = !empty($user['Avatar']) ? $user['Avatar'] : '/assets/img/user.png';
                 $_SESSION['Role'] = $user['AccountTypeID'];
-                header('Location: ' . ADMIN_URL . '/index.php');
+                header('Location: admin/index.php');
             } else {
                 $message = "<p style='color: #dc3545'>Tên đăng nhập hoặc mật khẩu không hợp lệ!</p>";
             }
