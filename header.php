@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="logo">
-                        <h1><a href="./"><img src="/assets/img/bht_bookstore_logo.png" style="height: 60px"></a></h1>
+                        <h1><a href="./"><img src="CLT-Bookstore-PHP-master/assets/img/bht_bookstore_logo.png" style="height: 60px"></a></h1>
                     </div>
                 </div>
 
