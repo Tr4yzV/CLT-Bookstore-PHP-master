@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BHT Bookstore</title>
+    <title>CLT Bookstore</title>
     <link rel="icon" href="/assets/img/favicon.png" />
 
     <!-- Google Fonts -->
