@@ -5,40 +5,18 @@ class Database
     private const USERNAME = 'cltbookstore';
     private const PASSWORD = '123456&*(A@';
     private const DBNAME = 'bht_bookstore';
-    private const SSL_CA = '/path/to/BaltimoreCyberTrustRoot.crt.pem'; // Đường dẫn đến CA certificate
+    
 
     /**
      * Tạo kết nối với CSDL
      */
     private static function Connect()
     {
-        $mysqli = mysqli_init();
-
-        // Bật chế độ SSL
-        $mysqli->ssl_set(
-            null, // No client key
-            null, // No client cert
-            self::SSL_CA, // CA certificate
-            null,
-            null
-        );
-
-        // Kết nối với server có SSL
-        $mysqli->real_connect(
-            self::HOST,
-            self::USERNAME,
-            self::PASSWORD,
-            self::DBNAME,
-            3306,
-            null,
-            MYSQLI_CLIENT_SSL
-        );
-
-        if ($mysqli->connect_error) {
-            die('Connection failed: ' . $mysqli->connect_error);
+        $connect = new mysqli(self::HOST, self::USERNAME, self::PASSWORD, self::DBNAME);
+        if ($connect->connect_error) {
+            die('Connection failed: ' . $connect->connect_error);
         }
-
-        return $mysqli;
+        return $connect;
     }
 
     /**
