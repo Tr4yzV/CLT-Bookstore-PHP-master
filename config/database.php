@@ -4,7 +4,7 @@ class Database
     private const HOST = 'cltbookstore-db.mysql.database.azure.com';
     private const USERNAME = 'cltbookstore';
     private const PASSWORD = '123456&*(A@';
-    private const DBNAME = 'cltbookstore-db';
+    private const DBNAME = 'bht_bookstore';
 
     /**
      * Tạo kết nối với CSDL
