@@ -1,8 +1,8 @@
 <?php
 class Database
 {
-    private const HOST = 'cltbookstore-db.mysql.database.azure.com';
-    private const USERNAME = 'cltbookstore';
+    private const HOST = 'webcualong-db.mysql.database.azure.com';
+    private const USERNAME = 'long123';
     private const PASSWORD = '123456&*(A@';
     private const DBNAME = 'bht_bookstore';
     
